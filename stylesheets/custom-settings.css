@@ -1,0 +1,68 @@
+@font-face {
+  font-family: 'childs_playnormal';
+  src: url("../fonts/child-webfont.eot");
+  src: url("../fonts/child-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/child-webfont.woff") format("woff"), url("../fonts/child-webfont.ttf") format("truetype"), url("../fonts/child-webfont.svg#childs_playnormal") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 14, ../sass/custom-settings.scss */
+body {
+  background: #222;
+}
+
+/* line 18, ../sass/custom-settings.scss */
+.name {
+  font-family: 'childs_playnormal';
+  font-size: 71px;
+  background: url(../images/3_edit.jpg) no-repeat center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/* line 29, ../sass/custom-settings.scss */
+.name-width {
+  width: 818px;
+}
+
+/* line 33, ../sass/custom-settings.scss */
+.ease {
+  transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+  /* Firefox 4 */
+  -webkit-transition-timing-function: ease;
+  /* Safari and Chrome */
+  -o-transition-timing-function: ease;
+  /* Opera */
+}
+
+/* line 40, ../sass/custom-settings.scss */
+.color {
+  background: #fff;
+}
+
+/* line 45, ../sass/custom-settings.scss */
+a {
+  color: #6f6f6f;
+}
+/* line 47, ../sass/custom-settings.scss */
+a:hover {
+  color: #fff;
+}
+
+/* line 52, ../sass/custom-settings.scss */
+.links {
+  margin-top: 16px;
+}
+
+/* line 56, ../sass/custom-settings.scss */
+.links ul > li {
+  list-style: none;
+}
+
+/* line 60, ../sass/custom-settings.scss */
+.links .spacing {
+  margin-left: 46px;
+}

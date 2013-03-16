@@ -1,0 +1,63 @@
+// Additional custom css rules
+
+@font-face {
+  font-family: 'childs_playnormal';
+  src: url('../fonts/child-webfont.eot');
+  src: url('../fonts/child-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/child-webfont.woff') format('woff'),
+  url('../fonts/child-webfont.ttf') format('truetype'),
+  url('../fonts/child-webfont.svg#childs_playnormal') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background: #222;
+}
+
+.name {
+  font-family: 'childs_playnormal';
+  font-size: 71px;
+  //letter-spacing: -1px;
+  background: url(../images/3_edit.jpg) no-repeat center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.name-width {
+  width: 818px;
+}
+
+.ease {
+  transition-timing-function: ease;
+  -moz-transition-timing-function: ease; /* Firefox 4 */
+  -webkit-transition-timing-function: ease; /* Safari and Chrome */
+  -o-transition-timing-function: ease; /* Opera */
+}
+
+.color {
+
+  background: #fff;
+}
+
+a {
+  color: #6f6f6f;
+  &:hover{
+    color: #fff;
+  }
+}
+
+.links {
+  margin-top: 16px;
+}
+
+.links ul > li {
+  list-style: none;
+}
+
+.links .spacing {
+  margin-left: 46px;
+}
+
