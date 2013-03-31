@@ -1,27 +1,26 @@
 $(window).resize(function() {
-
-
-  var wh = (($(window).height()-$('.center-me').height())/2)+'px';
-  var ww = (($(window).width()-$('.center-me').width())/2)+'px';
+  var windowHeight = (($(window).height()-$('.center-me').height())/2),
+      windowWidth = (($(window).width()-$('.center-me').width())/2),
+      px = 'px';
   $('.center-me').css({
-    top: wh,
-    left: ww,
+    top: windowHeight + px,
+    left: windowWidth + px,
     position: 'relative'
   });
+//  $('.quarter-me').css({
+//    top: (windowHeight/2) + px,
+//    left: windowWidth,
+//    position: 'relative'
+//  });
   $('.block').css({
     width: $(window).width(),
     height: $(window).height()
   })
+  $('.lander-block').css({
+    width: $(window).width(),
+    height: $(window).height()-24
+  })
 }).resize();
-
-//$.setBackground = function() {
-//  var colors = ['#2C3E50', '#F39C12', '#222'],
-//      randomColor = colors[Math.floor(Math.random() * colors.length)];
-//  $('#lander').css('background-color', randomColor);
-//};
-
-
-
 
 /*
  * Source: https://github.com/madrobby/zepto/issues/401
@@ -56,7 +55,6 @@ $.scroll = function(endY, duration) {
 
 
 Zepto(function($) {
-//  $.setBackground();
   $('#_about').on('click', function() {
     $.scroll($('#about').offset().top+1);
   });

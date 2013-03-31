@@ -20,14 +20,13 @@
 }
 
 .header {
-  @extend .text;
   font-family: 'Open Sans', sans-serif;
   margin-top: 10%;
 }
 
 body {
-  //background: #222;
-  background: #2E3030;
+  //background: #2E3030;
+  background: url(../images/navy_blue_@2X.png);
 }
 
 .name {
@@ -86,10 +85,19 @@ a {
   //background-color: #2ecc71;
   //background-color: #479a84;
   //background-color: #e74c3b;
-  background: #2E3030;
-  //background: #1ABC9C;
+  //background: #2E3030;
+  //background: #f3f3f3;
+  background: #f6f8f8;
   //border-top: 1px dashed #6f6f6f;
   //margin-top: 1px;
+  -webkit-box-shadow: 0px 0px 20px 20px rgba(0,0,0,0.3);
+  hr {
+    height: 5px;
+    background: #F39C12;
+    border: none;
+    border-width: none;
+    margin: none;
+  }
 }
 
 
