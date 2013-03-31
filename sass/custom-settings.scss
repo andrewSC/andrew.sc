@@ -1,5 +1,7 @@
 // Additional custom css rules
 
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
 @font-face {
   font-family: 'childs_playnormal';
   src: url('../fonts/child-webfont.eot');
@@ -11,15 +13,28 @@
   font-style: normal;
 }
 
+.font {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.4375em;
+  padding: 25px;
+}
+
+.header {
+  @extend .text;
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 10%;
+}
+
 body {
-  background: #222;
+  //background: #222;
+  background: #2E3030;
 }
 
 .name {
   font-family: 'childs_playnormal';
   font-size: 71px;
   //letter-spacing: -1px;
-  background: url(../images/3_edit.jpg) no-repeat center;
+  background: url(../images/name_bg.jpg) no-repeat center;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-top: 0px;
@@ -37,15 +52,16 @@ body {
   -o-transition-timing-function: ease; /* Opera */
 }
 
-.color {
-
-  background: #fff;
+.text {
+  color: #ebeaea;
 }
 
 a {
   color: #6f6f6f;
+  -webkit-transition: color 0.18s ease-out;
   &:hover{
-    color: #fff;
+    -webkit-transition: color 0.18s ease-out;
+    color: #ebeaea;
   }
 }
 
@@ -61,3 +77,48 @@ a {
   margin-left: 46px;
 }
 
+.block-margin {
+  margin-top: 5%;
+}
+
+#about {
+  //background-color: #f1c40f;
+  //background-color: #2ecc71;
+  //background-color: #479a84;
+  //background-color: #e74c3b;
+  background: #2E3030;
+  //background: #1ABC9C;
+  //border-top: 1px dashed #6f6f6f;
+  //margin-top: 1px;
+}
+
+
+#contact {
+  //background-color: #b84230;
+  background: #2E3030;
+  //border-top: 1px dashed #6f6f6f;
+  //margin-top: 1px;
+}
+
+#bio {
+  @extend .font;
+  //color: #fff;
+  background-color: #E67E22;
+  height: 40%;
+  border-radius: 5px;
+  //box-shadow: 3px 3px 5px 6px #222;
+}
+
+#links {
+  @extend .font;
+  background-color: #2ECC71;
+  height: 80%;
+  border-radius: 5px;
+}
+
+#feed {
+  @extend .font;
+  background-color: #E74C3C;
+  height: 80%;
+  border-radius: 5px;
+}

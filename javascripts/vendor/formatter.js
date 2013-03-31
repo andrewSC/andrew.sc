@@ -14,13 +14,21 @@ $(window).resize(function() {
   })
 }).resize();
 
+//$.setBackground = function() {
+//  var colors = ['#2C3E50', '#F39C12', '#222'],
+//      randomColor = colors[Math.floor(Math.random() * colors.length)];
+//  $('#lander').css('background-color', randomColor);
+//};
+
+
+
 
 /*
  * Source: https://github.com/madrobby/zepto/issues/401
  */
 $.scroll = function(endY, duration) {
   endY = endY || ($.os.android ? 1 : 0);
-  duration = duration || 200;
+  duration = duration || 410;
 
   var startY = document.body.scrollTop,
     startT  = +(new Date()),
@@ -48,10 +56,11 @@ $.scroll = function(endY, duration) {
 
 
 Zepto(function($) {
+//  $.setBackground();
   $('#_about').on('click', function() {
-    $.scroll($('#about').offset().top);
+    $.scroll($('#about').offset().top+1);
   });
   $('#_contact').on('click', function() {
-    $.scroll($('#contact').offset().top);
+    $.scroll($('#contact').offset().top+1);
   });
 });
