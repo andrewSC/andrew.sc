@@ -13,11 +13,11 @@ $(window).resize(function() {
 //    position: 'relative'
 //  });
   $('.block').css({
-    width: $(window).width(),
+    width: $(document).width(),
     height: $(window).height()
   })
   $('.lander-block').css({
-    width: $(window).width(),
+    width: $(document).width(),
     height: $(window).height()-24
   })
 }).resize();
@@ -55,6 +55,8 @@ $.scroll = function(endY, duration) {
 
 
 Zepto(function($) {
+
+  $(window).resize();
   $('#_about').on('click', function() {
     $.scroll($('#about').offset().top+1);
   });

@@ -8,24 +8,29 @@
 }
 
 /* line 16, ../sass/custom-settings.scss */
+html {
+  display: block;
+}
+
+/* line 20, ../sass/custom-settings.scss */
 .font, #bio, #links, #feed {
   font-family: "Open Sans", sans-serif;
   font-size: 1.4375em;
   padding: 25px;
 }
 
-/* line 22, ../sass/custom-settings.scss */
+/* line 26, ../sass/custom-settings.scss */
 .header {
   font-family: "Open Sans", sans-serif;
   margin-top: 10%;
 }
 
-/* line 27, ../sass/custom-settings.scss */
+/* line 31, ../sass/custom-settings.scss */
 body {
   background: url(../images/navy_blue_@2X.png);
 }
 
-/* line 32, ../sass/custom-settings.scss */
+/* line 36, ../sass/custom-settings.scss */
 .name {
   font-family: 'childs_playnormal';
   font-size: 71px;
@@ -36,12 +41,12 @@ body {
   margin-bottom: 0px;
 }
 
-/* line 43, ../sass/custom-settings.scss */
+/* line 47, ../sass/custom-settings.scss */
 .name-width {
   width: 818px;
 }
 
-/* line 47, ../sass/custom-settings.scss */
+/* line 51, ../sass/custom-settings.scss */
 .ease {
   transition-timing-function: ease;
   -moz-transition-timing-function: ease;
@@ -52,48 +57,48 @@ body {
   /* Opera */
 }
 
-/* line 54, ../sass/custom-settings.scss */
+/* line 58, ../sass/custom-settings.scss */
 .text {
   color: #ebeaea;
 }
 
-/* line 58, ../sass/custom-settings.scss */
+/* line 62, ../sass/custom-settings.scss */
 a {
   color: #6f6f6f;
   -webkit-transition: color 0.18s ease-out;
 }
-/* line 61, ../sass/custom-settings.scss */
+/* line 65, ../sass/custom-settings.scss */
 a:hover {
   -webkit-transition: color 0.18s ease-out;
   color: #ebeaea;
 }
 
-/* line 67, ../sass/custom-settings.scss */
+/* line 71, ../sass/custom-settings.scss */
 .links {
   margin-top: 16px;
 }
 
-/* line 71, ../sass/custom-settings.scss */
+/* line 75, ../sass/custom-settings.scss */
 .links ul > li {
   list-style: none;
 }
 
-/* line 75, ../sass/custom-settings.scss */
+/* line 79, ../sass/custom-settings.scss */
 .links .spacing {
   margin-left: 46px;
 }
 
-/* line 79, ../sass/custom-settings.scss */
+/* line 83, ../sass/custom-settings.scss */
 .block-margin {
   margin-top: 5%;
 }
 
-/* line 83, ../sass/custom-settings.scss */
+/* line 87, ../sass/custom-settings.scss */
 #about {
   background: #f6f8f8;
   -webkit-box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.3);
 }
-/* line 94, ../sass/custom-settings.scss */
+/* line 98, ../sass/custom-settings.scss */
 #about hr {
   height: 5px;
   background: #F39C12;
@@ -102,26 +107,26 @@ a:hover {
   margin: none;
 }
 
-/* line 104, ../sass/custom-settings.scss */
+/* line 108, ../sass/custom-settings.scss */
 #contact {
   background: #2E3030;
 }
 
-/* line 111, ../sass/custom-settings.scss */
+/* line 115, ../sass/custom-settings.scss */
 #bio {
   background-color: #E67E22;
   height: 40%;
   border-radius: 5px;
 }
 
-/* line 120, ../sass/custom-settings.scss */
+/* line 124, ../sass/custom-settings.scss */
 #links {
   background-color: #2ECC71;
   height: 80%;
   border-radius: 5px;
 }
 
-/* line 127, ../sass/custom-settings.scss */
+/* line 131, ../sass/custom-settings.scss */
 #feed {
   background-color: #E74C3C;
   height: 80%;
