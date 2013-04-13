@@ -104,7 +104,7 @@ a:hover {
   background: #F39C12;
   border: none;
   border-width: none;
-  margin: none;
+  margin: 0;
 }
 
 /* line 108, ../sass/custom-settings.scss */

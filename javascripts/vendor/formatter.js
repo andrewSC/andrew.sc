@@ -18,7 +18,7 @@ $(window).resize(function() {
   })
   $('.lander-block').css({
     width: $(document).width(),
-    height: $(window).height()-24
+    height: $(window).height()-5
   })
 }).resize();
 
@@ -55,7 +55,6 @@ $.scroll = function(endY, duration) {
 
 
 Zepto(function($) {
-
   $(window).resize();
   $('#_about').on('click', function() {
     $.scroll($('#about').offset().top+1);
