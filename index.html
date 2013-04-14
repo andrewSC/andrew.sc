@@ -15,6 +15,7 @@
   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
   <script src="javascripts/vendor/custom.modernizr.js"></script>
+  <script src="javascripts/vendor/base64.js"></script>
 
   <script>
     document.write('<script src=' +
@@ -22,27 +23,52 @@
         '.js><\/script>')
   </script>
 
-  <script src="javascripts/vendor/jquery.patternizer.js"></script>
   <script src="javascripts/vendor/formatter.js"></script>
+
 </head>
 <body>
-  <div id="lander" class="lander-block">
-      <h1 class="name name-width center-me">Andrew Scott Crerar</h1>
-    <div class="center-me name-width">
-      <div class="row">
-        <div class=" small-12 columns">
-        <ul class="small-block-grid-3 small-centered">
-          <li class="left text-center"><h4 class="subheader"><a class="no-decorate" href="http://blog.andrew.sc" target="_blank">Blog</a></h4></li>
-          <li class="left text-center"><h4 class="subheader"><a id="_about" class="no-decorate ease">About</a></h4></li>
-          <li class="left text-center"><h4 class="subheader"><a id="_contact" class="no-decorate ease">Contact</a></h4></li>
-        </ul>
-        </div>
+  <div class="content">
+    <div class="row">
+      <div class="large-5 columns">
+        <div class="name">Andrew Scott Crerar</div>
+      </div>
+      <div id="links" class="large-7 columns">
+        <span class="font">
+          <a href="https://github.com/andrewSC" target="_blank">github</a><span class="backslash">\</span>
+          <a href="http://www.linkedin.com/in/andrewcrerar" target="_blank">linkedin</a><span class="backslash">\</span>
+          <a href="https://www.facebook.com/andrew.s.crerar" target="_blank">facebook</a><span class="backslash">\</span>
+          <a href="https://plus.google.com/u/0/113033075755051153095" target="_blank">google+</a><span class="backslash">\</span>
+          <a href="https://twitter.com/andrew_sc" target="_blank">twitter</a><span class="backslash">\</span>
+          <a href="http://www.last.fm/user/Sharpimage" target="_blank">last.fm</a>
+        </span>
       </div>
     </div>
-  </div>
 
-  <div id="about">
-    <hr/>
+    <div id="about" class="row">
+      <div class="large-12 columns text-center">
+        <h2>I'm a student majoring in computer science at the Rochester Institute of Technology.  Right now I'm working at BrightTag in Chicago.</h2>
+      </div>
+    </div>
+
+    <div id="foo" class="row">
+      <div class="large-4 columns">
+        <h4>Most recent tweets</h4>
+        <div id="twitter"></div>
+      </div>
+      <div class="large-4 columns">
+        <h4>Latest blog hotness</h4>
+        At my work we use Git as a VCS and while Git is very powerful, trying to remember all those little arguments can become tedious at best. Great, we established aliases, autocompletion, and Git alias autocompletion would be nice but how do we go about setting all that up?
+        The first thing you’re going to want to do is setup/install...<a>Read more</a>
+      </div>
+      <div id="contact" class="large-4 columns">
+        <h4>Get in touch</h4>
+        Have an idea? Need help? Let's chat.
+        <div class="large=12 columns text-center">
+          <h5></h5>
+        </div>
+
+      </div>
+    </div>
   </div>
 
   <script src="javascripts/foundation/foundation.js"></script>

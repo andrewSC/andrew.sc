@@ -1,65 +1,39 @@
-$(window).resize(function() {
-  var windowHeight = (($(window).height()-$('.center-me').height())/2),
-      windowWidth = (($(window).width()-$('.center-me').width())/2),
-      px = 'px';
-  $('.center-me').css({
-    top: windowHeight + px,
-    left: windowWidth + px,
-    position: 'relative'
+function ValidUrl(str) {
+  var pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
+    '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // domain name
+    '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
+    '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
+    '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
+    '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
+  if(!pattern.test(str)) {
+    return false;
+  } else {
+    return true;
+  }
+}
+
+$.twitter = function(userName, numberOfTweets) {
+  var url = 'http://api.twitter.com/1/statuses/user_timeline/' + userName + '.json?callback=?';
+
+  $.getJSON(url, function(tweets) {
+    for (var i = 0; i < numberOfTweets; i++) {
+      var tokenizedTweet = tweets[i].text.split(/[' '|\n|\r]/),
+          tweet = '<div class="twitter">';
+
+      for (var j = 0; j < tokenizedTweet.length; j++) {
+        if (ValidUrl(tokenizedTweet[j])) {
+          tweet += (j > 0 ? ' ' : '') + '<a href="' + tokenizedTweet[j] + '" target="_blank">' + tokenizedTweet[j] + '</a>';
+        } else {
+          tweet += ' ' + tokenizedTweet[j];
+        }
+      }
+
+      $('#twitter').append(tweet + '</div></br>');
+    }
   });
-//  $('.quarter-me').css({
-//    top: (windowHeight/2) + px,
-//    left: windowWidth,
-//    position: 'relative'
-//  });
-  $('.block').css({
-    width: $(document).width(),
-    height: $(window).height()
-  })
-  $('.lander-block').css({
-    width: $(document).width(),
-    height: $(window).height()-5
-  })
-}).resize();
-
-/*
- * Source: https://github.com/madrobby/zepto/issues/401
- */
-$.scroll = function(endY, duration) {
-  endY = endY || ($.os.android ? 1 : 0);
-  duration = duration || 410;
-
-  var startY = document.body.scrollTop,
-    startT  = +(new Date()),
-    finishT = startT + duration;
-
-  var interpolate = function (source, target, shift) {
-    return (source + (target - source) * shift);
-  };
-
-  var easing = function (pos) {
-    return (-Math.cos(pos * Math.PI) / 2) + .5;
-  };
-
-  var animate = function() {
-    var now = +(new Date()),
-      shift = (now > finishT) ? 1 : (now - startT) / duration;
-
-    window.scrollTo(0, interpolate(startY, endY, easing(shift)));
-
-    (now > finishT) || setTimeout(animate, 15);
-  };
-
-  animate();
-};
-
+}
 
 Zepto(function($) {
-  $(window).resize();
-  $('#_about').on('click', function() {
-    $.scroll($('#about').offset().top+1);
-  });
-  $('#_contact').on('click', function() {
-    $.scroll($('#contact').offset().top+1);
-  });
+  $.twitter('andrew_sc', 4);
+  $('#contact h5').html('<a href="mailto:' + Base64.decode('YXNjOTAwM0ByaXQuZWR1') +'">' + Base64.decode('YXNjOTAwM0ByaXQuZWR1') + '</a>');
 });

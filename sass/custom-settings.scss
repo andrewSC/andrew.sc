@@ -2,13 +2,35 @@
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
+//@font-face {
+//  font-family: 'childs_playnormal';
+//  src: url('../fonts/child-webfont.eot');
+//  src: url('../fonts/child-webfont.eot?#iefix') format('embedded-opentype'),
+//  url('../fonts/child-webfont.woff') format('woff'),
+//  url('../fonts/child-webfont.ttf') format('truetype'),
+//  url('../fonts/child-webfont.svg#childs_playnormal') format('svg');
+//  font-weight: normal;
+//  font-style: normal;
+//}
+
+//@font-face {
+//  font-family: 'aller_rg-webfont';
+//  src: url('../fonts/aller_rg-webfont.eot');
+//  src: url('../fonts/aller_rg-webfont.eot?#iefix') format('embedded-opentype'),
+//  url('../fonts/aller_rg-webfont.woff') format('woff'),
+//  url('../fonts/aller_rg-webfont.ttf') format('truetype'),
+//  url('../fonts/aller_rg-webfont.svg#aller_rg-webfont') format('svg');
+//  font-weight: normal;
+//  font-style: normal;
+//}
+
 @font-face {
-  font-family: 'childs_playnormal';
-  src: url('../fonts/child-webfont.eot');
-  src: url('../fonts/child-webfont.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/child-webfont.woff') format('woff'),
-  url('../fonts/child-webfont.ttf') format('truetype'),
-  url('../fonts/child-webfont.svg#childs_playnormal') format('svg');
+  font-family: 'adobe_garamond_pro-webfont';
+  src: url('../fonts/adobe_garamond_pro-webfont.eot');
+  src: url('../fonts/adobe_garamond_pro-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/adobe_garamond_pro-webfont.woff') format('woff'),
+  url('../fonts/adobe_garamond_pro-webfont.ttf') format('truetype'),
+  url('../fonts/adobe_garamond_pro-webfont.svg#adobe_garamond_pro-webfont') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -17,10 +39,35 @@ html {
   display: block;
 }
 
+a {
+  color: #000;
+  -webkit-transition: color 0.18s ease-out;
+  &:hover{
+    -webkit-transition: color 0.18s ease-out;
+    color: #74869c;
+  }
+}
+
+#links {
+  margin-top: 15px;
+}
+
+#feed {
+  padding: 5px;
+}
+
+#foo,
+#about {
+  margin-top: 50px;
+}
+
+.content {
+  margin: 30px;
+}
+
 .font {
   font-family: 'Open Sans', sans-serif;
-  font-size: 1.4375em;
-  padding: 25px;
+  font-size: 1.250em;
 }
 
 .header {
@@ -28,24 +75,22 @@ html {
   margin-top: 10%;
 }
 
-body {
-  //background: #2E3030;
-  background: url(../images/type_@2X.png);
-}
-
 .name {
-  font-family: 'childs_playnormal';
-  font-size: 71px;
-  //letter-spacing: -1px;
-  background: url(../images/name_bg.jpg) no-repeat center;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-top: 0px;
-  margin-bottom: 0px;
+  font-family: 'adobe_garamond_pro-webfont';
+  font-size: 46px;
+  //color: #fff;
+  //background:#000;
 }
 
-.name-width {
-  width: 818px;
+.link {
+  //background: #000;
+  color: #fff;
+  margin-top: 1px;
+}
+
+.backslash {
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .ease {
@@ -55,82 +100,3 @@ body {
   -o-transition-timing-function: ease; /* Opera */
 }
 
-.text {
-  color: #ebeaea;
-}
-
-a {
-  color: #6f6f6f;
-  -webkit-transition: color 0.18s ease-out;
-  &:hover{
-    -webkit-transition: color 0.18s ease-out;
-    color: #ebeaea;
-  }
-}
-
-.links {
-  margin-top: 16px;
-}
-
-.links ul > li {
-  list-style: none;
-}
-
-.links .spacing {
-  margin-left: 46px;
-}
-
-.block-margin {
-  margin-top: 5%;
-}
-
-#about {
-  //background-color: #f1c40f;
-  //background-color: #2ecc71;
-  //background-color: #479a84;
-  //background-color: #e74c3b;
-  //background: #2E3030;
-  //background: #f3f3f3;
-  background: #f6f8f8;
-  //border-top: 1px dashed #6f6f6f;
-  //margin-top: 1px;
-  -webkit-box-shadow: 0px 0px 20px 20px rgba(0,0,0,0.3);
-  hr {
-    height: 5px;
-    background: #F39C12;
-    border: none;
-    border-width: none;
-    margin: 0;
-  }
-}
-
-
-#contact {
-  //background-color: #b84230;
-  background: #2E3030;
-  //border-top: 1px dashed #6f6f6f;
-  //margin-top: 1px;
-}
-
-#bio {
-  @extend .font;
-  //color: #fff;
-  background-color: #E67E22;
-  height: 40%;
-  border-radius: 5px;
-  //box-shadow: 3px 3px 5px 6px #222;
-}
-
-#links {
-  @extend .font;
-  background-color: #2ECC71;
-  height: 80%;
-  border-radius: 5px;
-}
-
-#feed {
-  @extend .font;
-  background-color: #E74C3C;
-  height: 80%;
-  border-radius: 5px;
-}
