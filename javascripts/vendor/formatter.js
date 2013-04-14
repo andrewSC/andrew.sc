@@ -18,7 +18,7 @@ $.twitter = function(userName, numberOfTweets) {
   $.getJSON(url, function(tweets) {
     for (var i = 0; i < numberOfTweets; i++) {
       var tokenizedTweet = tweets[i].text.split(/[' '|\n|\r]/),
-          tweet = '<div class="twitter">';
+          tweet = '<div>';
 
       for (var j = 0; j < tokenizedTweet.length; j++) {
         if (ValidUrl(tokenizedTweet[j])) {
@@ -28,12 +28,12 @@ $.twitter = function(userName, numberOfTweets) {
         }
       }
 
-      $('#twitter').append(tweet + '</div></br>');
+      $('#twitter').append(tweet + '</div>');
     }
   });
 }
 
 Zepto(function($) {
-  $.twitter('andrew_sc', 4);
+  $.twitter('andrew_sc', 5);
   $('#contact h5').html('<a href="mailto:' + Base64.decode('YXNjOTAwM0ByaXQuZWR1') +'">' + Base64.decode('YXNjOTAwM0ByaXQuZWR1') + '</a>');
 });

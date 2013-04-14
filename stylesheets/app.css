@@ -14,7 +14,7 @@ html {
 
 /* line 42, ../sass/custom-settings.scss */
 a {
-  color: #000;
+  color: #3498DB;
   -webkit-transition: color 0.18s ease-out;
 }
 /* line 45, ../sass/custom-settings.scss */
@@ -28,15 +28,15 @@ a:hover {
   margin-top: 15px;
 }
 
-/* line 55, ../sass/custom-settings.scss */
-#feed {
-  padding: 5px;
+/* line 56, ../sass/custom-settings.scss */
+#feed,
+#about {
+  margin-top: 50px;
 }
 
 /* line 60, ../sass/custom-settings.scss */
-#foo,
-#about {
-  margin-top: 50px;
+#twitter div {
+  margin-bottom: 5px;
 }
 
 /* line 64, ../sass/custom-settings.scss */
@@ -62,19 +62,19 @@ a:hover {
   font-size: 46px;
 }
 
-/* line 85, ../sass/custom-settings.scss */
+/* line 83, ../sass/custom-settings.scss */
 .link {
   color: #fff;
   margin-top: 1px;
 }
 
-/* line 91, ../sass/custom-settings.scss */
+/* line 88, ../sass/custom-settings.scss */
 .backslash {
   margin-left: 5px;
   margin-right: 5px;
 }
 
-/* line 96, ../sass/custom-settings.scss */
+/* line 93, ../sass/custom-settings.scss */
 .ease {
   transition-timing-function: ease;
   -moz-transition-timing-function: ease;
