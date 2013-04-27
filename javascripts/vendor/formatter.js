@@ -1,4 +1,4 @@
-function ValidUrl(str) {
+function validUrl(str) {
   var pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
     '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // domain name
     '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
@@ -21,19 +21,34 @@ $.twitter = function(userName, numberOfTweets) {
           tweet = '<div>';
 
       for (var j = 0; j < tokenizedTweet.length; j++) {
-        if (ValidUrl(tokenizedTweet[j])) {
+        if (validUrl(tokenizedTweet[j])) {
           tweet += (j > 0 ? ' ' : '') + '<a href="' + tokenizedTweet[j] + '" target="_blank">' + tokenizedTweet[j] + '</a>';
         } else {
           tweet += ' ' + tokenizedTweet[j];
         }
       }
-
-      $('#twitter').append(tweet + '</div>');
+      tweet += '</div>';
+      $(tweet).hide().appendTo('#twitter').fadeIn(500);
     }
   });
 }
 
 Zepto(function($) {
+  var email = Base64.decode('YXNjOTAwM0ByaXQuZWR1');
+
   $.twitter('andrew_sc', 5);
-  $('#contact h5').html('<a href="mailto:' + Base64.decode('YXNjOTAwM0ByaXQuZWR1') +'">' + Base64.decode('YXNjOTAwM0ByaXQuZWR1') + '</a>');
+
+  $('form').submit(function(e) {
+    e.preventDefault();
+    var data = {};
+    data.from = $('#email').val();
+    data.to = email;
+
+    Squaresend.mailto(data, function(){});
+
+    $('#contact div').remove();
+    $('#contact').append("<p class='thanks text-center'><span class='bold'>Thanks!</span><br> You'll be contacted shortly.</p>");
+  });
+
+  $('#contact h5').html('<a href="mailto:' + email + '">' + email + '</a>');
 });
