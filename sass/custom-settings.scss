@@ -26,22 +26,6 @@ a {
   }
 }
 
-#links {
-  margin-top: 17px;
-}
-
-#about {
-  margin-top: 50px;
-}
-
-#feed {
-  margin-top: 50px;
-}
-
-#twitter div {
-  margin-bottom: 5px;
-}
-
 .content {
   margin: 30px;
 }
@@ -80,6 +64,16 @@ a {
   font-weight: bold;
 }
 
-.thanks {
 
+#links {
+  margin-top: 17px;
+}
+
+#about,
+#feed {
+  margin-top: 50px;
+}
+
+#twitter div {
+  margin-bottom: 5px;
 }
