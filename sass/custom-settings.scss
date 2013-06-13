@@ -15,6 +15,12 @@
 
 html {
   display: block;
+  color:#55606e;
+  //background: url(../images/Chicago2.jpg) no-repeat center center fixed;
+  //-webkit-background-size: cover;
+  //-moz-background-size: cover;
+  //-o-background-size: cover;
+  //background-size: cover;
 }
 
 a {
@@ -43,6 +49,7 @@ a {
 .name {
   font-family: 'adobe_garamond_pro-webfont';
   font-size: 46px;
+  color: #fff;
 }
 
 .thank-you {

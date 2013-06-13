@@ -12,12 +12,16 @@ function validUrl(str) {
   }
 }
 
-$.twitter = function(userName, numberOfTweets) {
-  var url = 'http://api.twitter.com/1/statuses/user_timeline/' + userName + '.json?callback=?';
+$.twitter = function(params) {
+  var cb = new Codebird;
 
-  $.getJSON(url, function(tweets) {
-    for (var i = 0; i < numberOfTweets; i++) {
-      var tokenizedTweet = tweets[i].text.split(/[' '|\n|\r]/),
+  //  Don't worry, I have my twitter app set to read only ;)
+  cb.setConsumerKey('TfmFbEOXAAC2PGCLBwdlLg', 's7Di6FYUdn5c9NaXEMSWFJIcOtRrA06ixviv32Krkdc');
+  cb.setToken('128092384-Yd45v6H1Jorz3u1HhUB9deKpLgd2W46KJWw9Itzb', 'LuDd4NUqbpLWe2cBJMXS5LHiaExPKWclPmAjBiuLkc');
+
+  cb.__call('statuses_userTimeline', params, function(reply) {
+    for (var i = 0; i < params['count']; i++) {
+      var tokenizedTweet = reply[i].text.split(/[' '|\n|\r]/),
           tweet = '<div>';
 
       for (var j = 0; j < tokenizedTweet.length; j++) {
@@ -36,7 +40,10 @@ $.twitter = function(userName, numberOfTweets) {
 Zepto(function($) {
   var email = Base64.decode('YXNjOTAwM0ByaXQuZWR1');
 
-  $.twitter('andrew_sc', 5);
+  $.twitter({
+    screen_name: 'andrew_sc',
+    count: 4
+  });
 
   $('form').submit(function(e) {
     e.preventDefault();
