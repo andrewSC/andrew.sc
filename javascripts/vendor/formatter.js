@@ -12,7 +12,7 @@ function validUrl(str) {
   }
 }
 
-$.twitter = function(params) {
+function twitter(params) {
   var cb = new Codebird;
 
   //  Don't worry, I have my twitter app set to read only ;)
@@ -21,12 +21,12 @@ $.twitter = function(params) {
 
   cb.__call('statuses_userTimeline', params, function(reply) {
     for (var i = 0; i < params['count']; i++) {
-      var tokenizedTweet = reply[i].text.split(/[' '|\n|\r]/),
-          tweet = '<div>';
+      var tokenizedTweet = reply[i].text.split(/[" "|\n|\r]/),
+          tweet = '<div><i class="icon-twitter"></i>';
 
       for (var j = 0; j < tokenizedTweet.length; j++) {
         if (validUrl(tokenizedTweet[j])) {
-          tweet += (j > 0 ? ' ' : '') + '<a href="' + tokenizedTweet[j] + '" target="_blank">' + tokenizedTweet[j] + '</a>';
+          tweet += (j > 0 ? ' ' : '') + ' <a href="' + tokenizedTweet[j] + '" target="_blank">' + tokenizedTweet[j] + '</a>';
         } else {
           tweet += ' ' + tokenizedTweet[j];
         }
@@ -37,12 +37,20 @@ $.twitter = function(params) {
   });
 }
 
+function github(params) {
+ // TODO: fill this out (switching gears for a bit)
+}
+
+$.getEvents = function (params) {
+  twitter(params['twitter']);
+}
+
 Zepto(function($) {
   var email = Base64.decode('YXNjOTAwM0ByaXQuZWR1');
 
-  $.twitter({
-    screen_name: 'andrew_sc',
-    count: 4
+  $.getEvents({
+     'twitter': { screen_name: 'andrew_sc', count: 4},
+     'github': { screen_name: 'andrewSC'}
   });
 
   $('form').submit(function(e) {
