@@ -16,15 +16,10 @@
 html {
   display: block;
   color:#55606e;
-  //background: url(../images/Chicago2.jpg) no-repeat center center fixed;
-  //-webkit-background-size: cover;
-  //-moz-background-size: cover;
-  //-o-background-size: cover;
-  //background-size: cover;
 }
 
 a {
-  color: #3498DB;
+  color: #45a38d;
   -webkit-transition: color 0.18s ease-out;
   &:hover{
     -webkit-transition: color 0.18s ease-out;
@@ -83,4 +78,9 @@ a {
 
 #twitter div {
   margin-bottom: 5px;
+}
+
+.button {
+  background-color: #45a38d;
+  border-color: #367f6e;
 }
