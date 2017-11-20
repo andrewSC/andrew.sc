@@ -46,7 +46,7 @@ $.getEvents = function (params) {
 }
 
 Zepto(function($) {
-  var email = Base64.decode('YXNjOTAwM0ByaXQuZWR1');
+  var email = Base64.decode('YW5kcmV3QGNyZXJhci5pbw==');
 
   $.getEvents({
      'twitter': { screen_name: 'andrew_sc', count: 4},
@@ -65,5 +65,5 @@ Zepto(function($) {
     $('#contact').append("<p class='thanks text-center'><span class='bold'>Thanks!</span><br> You'll be contacted shortly.</p>");
   });
 
-  $('#contact h5').html('<a href="mailto:' + email + '">' + email + '</a>');
+  $('#contact h3').html('<a href="mailto:' + email + '">' + email + '</a>');
 });
